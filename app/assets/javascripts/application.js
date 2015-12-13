@@ -10,8 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
+//= require jquery.js
 //= require turbolinks
 //= require angular/angular.min.js
 //= require angular/angular-route.min.js

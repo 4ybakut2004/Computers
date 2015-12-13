@@ -21,3 +21,5 @@ app.controller(
 	'HomeController',
 	['$rootScope', '$scope', '$location', '$route', '$routeParams', HomeController]
 );
+
+app.directive('ngNavigation', ['$compile', NgNavigation]);

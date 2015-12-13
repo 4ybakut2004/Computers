@@ -1,5 +1,5 @@
 RailsAdmin.config do |config|
-  config.main_app_name = ["ApplicationName"]
+  config.main_app_name = ["Computers"]
 
   config.included_models = []
 
