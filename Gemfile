@@ -32,6 +32,7 @@ gem 'unicorn'
 # Upstars scripts
 gem 'foreman', '0.63.0'
 
+gem 'font-awesome-rails'
 gem 'rails_admin', '0.6.8'
 gem 'paperclip', '~> 4.3'
 

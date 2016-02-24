@@ -1,0 +1,31 @@
+.price, .price-prefix, .rub {
+	color: #45AED6;
+	font-weight: bold;
+}
+
+.price {
+	font-size: 8em;
+}
+
+.price-prefix {
+	font-size: 2em;
+}
+
+.rub {
+	font-size: 4em;
+}
+
+.crossed-price {
+	font-size: 3em;
+	color: #FF5959;
+	text-decoration: line-through;
+}
+
+.p-without-margin {
+	margin: 0px;
+}
+
+.phone {
+	font-size: 2em;
+	font-weight: bold;
+}

@@ -9,7 +9,7 @@ Author URL: http://shapebootstrap.net
 *******Typography******
 **************************/
 body {
-  padding-top: 100px;
+  padding-top: 150px;
   background: #fff;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -173,14 +173,16 @@ ul.nostyle i {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
   }
   #main-menu.navbar-default .navbar-nav > li > a {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 80px;
+    text-align: center;
   }
   #main-menu.navbar-default .navbar-nav > li.active > a,
   #main-menu.navbar-default .navbar-nav > li.open > a,
   #main-menu.navbar-default .navbar-nav > li:hover > a {
     background: transparent;
-    padding-top: 37px;
+    padding-top: 17px;
     border-top: 3px solid #45aed6;
   }
   #main-menu.navbar-default .dropdown-menu {
