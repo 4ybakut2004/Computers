@@ -1,10 +1,10 @@
-.price, .price-prefix, .rub {
+.big-price, .price-prefix, .rub {
 	color: #45AED6;
 	font-weight: bold;
 }
 
-.price {
-	font-size: 8em;
+.big-price {
+	font-size: 6em;
 }
 
 .price-prefix {
@@ -13,11 +13,17 @@
 
 .rub {
 	font-size: 4em;
+	margin-right: 20px;
 }
 
 .crossed-price {
 	font-size: 3em;
 	color: #FF5959;
+	text-decoration: line-through;
+}
+
+.small-crossed-price {
+	color: #794242;
 	text-decoration: line-through;
 }
 
@@ -28,4 +34,19 @@
 .phone {
 	font-size: 2em;
 	font-weight: bold;
+}
+
+.header-phone {
+	font-size: 1.4em;
+	font-weight: bold;
+	padding-top: 15px !important;
+}
+
+.header-address {
+	font-size: 1.4em;
+	padding-top: 15px !important;
+}
+
+.service-section {
+	padding-bottom: 50px;
 }

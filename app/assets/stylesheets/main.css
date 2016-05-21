@@ -160,11 +160,11 @@ ul.nostyle i {
   margin-bottom: 0;
 }
 .navbar.navbar-default .navbar-toggle {
-  margin-top: 32px;
+  margin-top: 10px;
 }
 .navbar.navbar-default .navbar-brand {
   height: auto;
-  padding: 22px 15px 21px;
+  padding: 10px 15px 10px;
 }
 @media only screen and (min-width: 768px) {
   #main-menu.navbar-default {
@@ -173,16 +173,18 @@ ul.nostyle i {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
   }
   #main-menu.navbar-default .navbar-nav > li > a {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 80px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    height: 50px;
     text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
   }
   #main-menu.navbar-default .navbar-nav > li.active > a,
   #main-menu.navbar-default .navbar-nav > li.open > a,
   #main-menu.navbar-default .navbar-nav > li:hover > a {
     background: transparent;
-    padding-top: 17px;
+    padding-top: 12px;
     border-top: 3px solid #45aed6;
   }
   #main-menu.navbar-default .dropdown-menu {
@@ -537,7 +539,10 @@ ul.nostyle i {
   margin-top: 10px;
 }
 #about {
-  padding: 100px 0;
+  padding: 50px 0;
+}
+#quality {
+  padding-bottom: 40px;
 }
 #work-process {
   padding: 100px 0 50px;
@@ -737,7 +742,7 @@ ul.nostyle i {
   background-image: -moz-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%);
   background-image: -webkit-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%);
   background-image: -ms-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%);
-  color: #fff;
+  color: #fff !important;
   border-radius: 100px;
   border: 5px solid #f6f6f6;
 }
@@ -748,7 +753,7 @@ ul.nostyle i {
 #pricing ul.pricing li.plan-header .price-duration > span.price {
   font-size: 24px;
   font-weight: 700;
-  margin-top: 35px;
+  margin-top: 40px;
 }
 #pricing ul.pricing li.plan-header .price-duration > span.duration {
   margin-top: 5px;

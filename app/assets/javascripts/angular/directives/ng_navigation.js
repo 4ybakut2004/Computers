@@ -8,7 +8,7 @@ function NgNavigation($compile) {
 			});
 
 			element.find('ul li a').on('click', function() {  
-				$('html, body').animate({scrollTop: $(this.hash).offset().top - 100}, 1000);
+				$('html, body').animate({scrollTop: $(this.hash).offset().top - 115}, 1000);
 				return false;
 			});
 
@@ -23,13 +23,15 @@ function NgNavigation($compile) {
 					contentTop.push( $( $(this).attr('href') ).offset().top);
 					contentBottom.push( $( $(this).attr('href') ).offset().top + $( $(this).attr('href') ).height() );
 				})
-				$.each( contentTop, function(i){
-					if ( winTop > contentTop[i] - rangeTop ){
-						element.find('li.scroll')
-						.removeClass('active')
-						.eq(i).addClass('active');
-					}
-				})
+				if(attrs.setActive) {
+					$.each( contentTop, function(i){
+						if ( winTop > contentTop[i] - rangeTop ){
+							element.find('li.scroll')
+							.removeClass('active')
+							.eq(i).addClass('active');
+						}
+					});
+				}
 			};
 		}
 	};

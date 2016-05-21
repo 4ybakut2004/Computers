@@ -1,36 +1,37 @@
-<div class="container">
-    <div class="section-header">
-        <h2 class="section-title text-center wow fadeInDown"><%= service_object.name %></h2>
-    </div>
-    <div class="row">
-        <div class="col-sm-6 wow fadeInLeft">
-            <img class="img-responsive" src="<%= asset_path("main-feature.png") %>" alt="">
+<section id="<%= service_object.key %>" class="service-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title text-center wow fadeInDown"><%= service_object.name %></h2>
         </div>
-        <div class="col-sm-6">
-            <div class="media service-box wow fadeInRight">
-                <div class="media-body">
-                    <p><%= service_object.title_text %></p>
-                </div>
+        <div class="row">
+            <div class="col-sm-6 wow fadeInLeft">
+                <img class="img-responsive" src="<%= asset_path("main-feature.png") %>" alt="">
             </div>
-
-            <div class="media service-box wow fadeInRight price-container">
-                <div class="media-body">
-                    <br>
-                    <br>
-                    <p>
-                        <span class="price-prefix">От</span>
-                        <span class="price"><%= service_object.price %></span>
-                        <span class="rub">Р</span>
-                        <span class="crossed-price">(<%= service_object.crossed_price %> р)</span>
-                    </p>
+            <div class="col-sm-6">
+                <div class="media service-box wow fadeInRight">
+                    <div class="media-body">
+                        <p><%= service_object.title_text.html_safe %></p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="media service-box wow fadeInRight price-container">
-                <div class="media-body">
-                    <input type="button" class="btn btn-primary btn-lg" value="Вызвать мастера">
+                <div class="media service-box wow fadeInRight price-container">
+                    <div class="media-body">
+                        <br>
+                        <br>
+                        <p>
+                            <span class="price-prefix">От</span>
+                            <span class="big-price"><%= service_object.price %></span>
+                            <span class="crossed-price">(<%= service_object.crossed_price %>)</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="media service-box wow fadeInRight price-container">
+                    <div class="media-body">
+                        <input type="button" class="btn btn-primary btn-lg" value="Вызвать мастера">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>

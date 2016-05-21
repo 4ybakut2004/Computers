@@ -1,0 +1,17 @@
+<section id="pricing">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title text-center wow fadeInDown">Цены</h2>
+        </div>
+
+        <% @prices.in_groups_of(4, false).each do |array| %>
+            <div class="row">
+                <% array.each_with_index do |price, i| %>
+                    <div class="col-sm-6 col-md-3">
+                        <%= render partial: 'static_pages/service_price', locals: { service_object: price, milliseconds: i * 200 } %>
+                    </div>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+</section><!--/#pricing-->
