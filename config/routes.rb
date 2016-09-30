@@ -6,6 +6,15 @@ Rails.application.routes.draw do
 
   # Пути к статическим страничкам
   get 'static_pages/home'
+  get 'static_pages/success_dialog'
+  get 'static_pages/error_dialog'
+
+  namespace :api do
+    namespace :v1 do
+      # Отправка заявки
+      resources :requests, only: [:create]
+    end
+  end
 
   # По всем путям выдавать домашнюю страницу, так как роутингом управляет angularjs
   get "*path" => "static_pages#index"

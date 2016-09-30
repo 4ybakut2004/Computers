@@ -36,6 +36,7 @@ gem 'font-awesome-rails'
 gem 'rails_admin', '0.6.8'
 gem 'paperclip', '~> 4.3'
 gem 'ckeditor'
+gem 'delayed_job_active_record'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

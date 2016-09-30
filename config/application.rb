@@ -22,5 +22,17 @@ module Computers
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.active_job.queue_adapter = :delayed_job
+
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+        address:              'smtp.gmail.com',
+        port:                 587,
+        domain:               'gmail.com',
+        user_name:            ENV["GMAIL_USERNAME"],
+        password:             ENV["GMAIL_PASSWORD"],
+        authentication:       'plain',
+        enable_starttls_auto: true  }
   end
 end

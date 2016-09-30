@@ -1,15 +1,9 @@
 <%= render 'static_pages/home_header' %>
 <%= render 'static_pages/home_about' %>
 
-<%= render partial: 'static_pages/home_service', locals: { service_object: @services["windows"] }%>
-<%= render partial: 'static_pages/home_service', locals: { service_object: @services["repair"] } %>
-<%= render partial: 'static_pages/home_service', locals: { service_object: @services["note_repair"] } %>
-<%= render partial: 'static_pages/home_service', locals: { service_object: @services["monoblock_repair"] } %>
-<%= render partial: 'static_pages/home_service', locals: { service_object: @services["wifi"] } %>
-<%= render partial: 'static_pages/home_service', locals: { service_object: @services["internet"] } %>
-<%= render partial: 'static_pages/home_service', locals: { service_object: @services["data_repair"] } %>
-<%= render partial: 'static_pages/home_service', locals: { service_object: @services["sites"] } %>
-<%= render partial: 'static_pages/home_service', locals: { service_object: @services["cartridges"] } %>
+<% @services_array.each do |service| %>
+  <%= render partial: 'static_pages/home_service', locals: { service_object: service }%>
+<% end %>
 
 <%= render 'static_pages/home_work_process' %>
 <%= render 'static_pages/home_pricing' %>

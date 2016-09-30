@@ -1,11 +1,13 @@
-<section id="<%= service_object.key %>" class="service-section">
+<section id="service-section-<%= service_object.key %>" class="service-section">
     <div class="container">
         <div class="section-header">
             <h2 class="section-title text-center wow fadeInDown"><%= service_object.name %></h2>
         </div>
         <div class="row">
             <div class="col-sm-6 wow fadeInLeft">
-                <img class="img-responsive" src="<%= asset_path("main-feature.png") %>" alt="">
+                <img class="img-responsive"
+                     src="<%= service_object.big_image.exists? ? service_object.big_image.url(:big) : asset_path("main-feature.png") %>"
+                     alt="">
             </div>
             <div class="col-sm-6">
                 <div class="media service-box wow fadeInRight">
@@ -28,7 +30,7 @@
 
                 <div class="media service-box wow fadeInRight price-container">
                     <div class="media-body">
-                        <input type="button" class="btn btn-primary btn-lg" value="Вызвать мастера">
+                        <input type="button" class="btn btn-primary btn-lg" value="Вызвать мастера" ng-scroll-to="#contact">
                     </div>
                 </div>
             </div>

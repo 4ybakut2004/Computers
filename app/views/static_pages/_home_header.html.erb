@@ -29,41 +29,11 @@
                 <div class="col-md-12">
                     <div class="collapse navbar-collapse navbar-right" ng-navigation set-active="true">
                         <ul class="nav navbar-nav">
-                            <li class="scroll active">
-                                <a href="#<%= @services["windows"].key %>">
-                                    <%= @services["windows"].name %>
-                                </a>
-                            </li>
-                            <li class="scroll">
-                                <a href="#<%= @services["repair"].key %>">
-                                    <%= @services["repair"].name %>
-                                </a>
-                            </li>
-                            <li class="scroll">
-                                <a href="#<%= @services["note_repair"].key %>">
-                                    <%= @services["note_repair"].name %>
-                                </a>
-                            </li>
-                            <li class="scroll">
-                                <a href="#<%= @services["monoblock_repair"].key %>">
-                                    <%= @services["monoblock_repair"].name %>
-                                </a>
-                            </li>
-                            <li class="scroll">
-                                <a href="#<%= @services["wifi"].key %>">
-                                    <%= @services["wifi"].name %>
-                                </a>
-                            </li>
-                            <li class="scroll">
-                                <a href="#<%= @services["internet"].key %>">
-                                    <%= @services["internet"].name %>
-                                </a>
-                            </li>
-                            <li class="scroll">
-                                <a href="#<%= @services["data_repair"].key %>">
-                                    <%= @services["data_repair"].name %>
-                                </a>
-                            </li>
+                            <% @services_array.each_with_index do |service, index| %>
+                              <% if service.show_in_header %>
+                                <%= render partial: 'static_pages/service_nav', locals: { service_object: service, is_active: index == 0 } %>
+                              <% end %>
+                            <% end %>
                         </ul>
                     </div>
                 </div>

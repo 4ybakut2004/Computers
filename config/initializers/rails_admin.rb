@@ -27,7 +27,7 @@ RailsAdmin.config do |config|
     end
 
     edit do
-      include_fields :company_name, :phone, :address, :about
+      include_fields :company_name, :phone, :address, :about, :requests_email
 
       field :company_name do
         label "Название компании"
@@ -44,10 +44,14 @@ RailsAdmin.config do |config|
       field :about do
         label "О нас"
       end
+
+      field :requests_email do
+        label "Почта для получения заявок"
+      end
     end
 
     show do
-      include_fields :company_name, :phone, :about
+      include_fields :company_name, :phone, :address, :about, :requests_email
 
       field :company_name do
         label "Название компании"
@@ -57,8 +61,16 @@ RailsAdmin.config do |config|
         label "Номер телефона компании"
       end
 
+      field :address do
+        label "Адрес"
+      end
+
       field :about do
         label "О нас"
+      end
+
+      field :requests_email do
+        label "Почта для получения заявок"
       end
     end
 
@@ -72,6 +84,9 @@ RailsAdmin.config do |config|
     weight 2
 
     list do
+      sort_by :order
+      sort_reverse false
+
       include_fields :name, :price, :crossed_price
 
       field :name do
@@ -88,19 +103,36 @@ RailsAdmin.config do |config|
     end
 
     edit do
-      include_fields :name, :price, :crossed_price, :title_text
+      include_fields :name, :key, :show_in_header, :price, :crossed_price, :order, :big_image, :title_text
 
       field :name do
         label "Название"
         read_only true
       end
 
+      field :key do
+        label "Постоянная ссылка"
+        read_only true
+      end
+
+      field :show_in_header do
+        label "Показывать в шапке"
+      end
+
       field :price do
         label "Цена"
       end
 
+      field :order do
+        label "Порядковый номер"
+      end
+
       field :crossed_price do
         label "Зачеркнутая цена"
+      end
+
+      field :big_image do
+        label "Большая картинка"
       end
 
       field :title_text, :ck_editor do

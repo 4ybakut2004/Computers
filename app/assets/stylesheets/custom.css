@@ -50,3 +50,10 @@
 .service-section {
 	padding-bottom: 50px;
 }
+
+.ngdialog-content {
+	padding-left: 50px !important;
+	padding-right: 50px !important;
+	padding-bottom: 30px !important;
+	width: 400px !important;
+}

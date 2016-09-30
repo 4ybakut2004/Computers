@@ -1,8 +1,15 @@
 # Услуги
 class Service < ActiveRecord::Base
 
+  has_attached_file :big_image, styles: { medium: "300x300>", big: "557x557>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :big_image, content_type: /\Aimage\/.*\z/
+
   validates :name, presence: true
   validates :key, presence: true, uniqueness: true
+
+  scope :with_order, -> { order("services.order ASC") }
+
+  default_scope { with_order }
 
   # Первоначальная инициализация
   def self.init_services
