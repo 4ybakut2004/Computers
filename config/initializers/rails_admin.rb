@@ -87,7 +87,7 @@ RailsAdmin.config do |config|
       sort_by :order
       sort_reverse false
 
-      include_fields :name, :price, :crossed_price
+      include_fields :name, :price, :crossed_price, :order
 
       field :name do
         label "Название"
@@ -100,6 +100,10 @@ RailsAdmin.config do |config|
       field :crossed_price do
         label "Зачеркнутая цена"
       end
+
+      field :order do
+        label "Порядковый номер"
+      end
     end
 
     edit do
@@ -107,12 +111,10 @@ RailsAdmin.config do |config|
 
       field :name do
         label "Название"
-        read_only true
       end
 
       field :key do
         label "Постоянная ссылка"
-        read_only true
       end
 
       field :show_in_header do
@@ -242,7 +244,7 @@ RailsAdmin.config do |config|
     dashboard                     # mandatory
     index                         # mandatory
     new do
-      except ['Service', 'AppSetting']
+      except ['AppSetting']
     end
     bulk_delete do
       except ['Service', 'AppSetting']
@@ -250,7 +252,7 @@ RailsAdmin.config do |config|
     show
     edit
     delete do
-      except ['Service', 'AppSetting']
+      except ['AppSetting']
     end
   end
 end
