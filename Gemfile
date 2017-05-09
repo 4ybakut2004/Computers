@@ -38,6 +38,8 @@ gem 'paperclip', '~> 4.3'
 gem 'ckeditor'
 gem 'delayed_job_active_record'
 
+gem 'mainsms_api'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
