@@ -3,9 +3,12 @@ function HomeController($rootScope, $scope, $location, $route, $routeParams, Req
 	new WOW().init();
 
 	$scope.ngDialogData = {};
+	$scope.requestCreating = false;
 
 	$scope.createRequest = function() {
+		$scope.requestCreating = true;
 		Request.create({ name: $scope.name, phone: $scope.phone }, function(response) {
+			$scope.requestCreating = false;
 			ngDialog.open({
 				template: 'static_pages/success_dialog',
 				className: 'ngdialog-theme-default',
@@ -13,6 +16,7 @@ function HomeController($rootScope, $scope, $location, $route, $routeParams, Req
 				scope: $scope
 			});
 		}, function(response) {
+			$scope.requestCreating = false;
 			ngDialog.open({
 				template: 'static_pages/error_dialog',
 				className: 'ngdialog-theme-default',

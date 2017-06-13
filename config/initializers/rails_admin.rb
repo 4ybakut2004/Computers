@@ -1,7 +1,86 @@
 RailsAdmin.config do |config|
   config.main_app_name = ["Computers"]
 
-  config.included_models = ["AppSetting", "Service", "Price", "Email"]
+  config.included_models = ["AppSetting", "Service", "Price", "Email", "PhoneNumber", "Request"]
+
+  config.model "Request" do
+    object_label_method do
+      :name
+    end
+
+    weight 1
+
+    list do
+      include_fields :phone, :name, :sms_sent, :created_at
+
+      field :phone do
+        label "Номер телефона"
+      end
+
+      field :name do
+        label "Имя"
+      end
+
+      field :sms_sent do
+        label "SMS отправлено"
+      end
+
+      field :created_at do
+        label "Дата создания"
+      end
+    end
+
+    edit do
+      include_fields :phone, :name, :sms_sent, :sms_status, :created_at
+
+      field :phone do
+        label "Номер телефона"
+      end
+
+      field :name do
+        label "Имя"
+      end
+
+      field :sms_sent do
+        read_only true
+        label "SMS отправлено"
+      end
+
+      field :sms_status do
+        read_only true
+        label "Статус отправки SMS"
+      end
+
+      field :created_at do
+        read_only true
+        label "Дата создания"
+      end
+    end
+
+    show do
+      include_fields :phone, :name, :sms_sent, :sms_status, :created_at
+
+      field :phone do
+        label "Номер телефона"
+      end
+
+      field :name do
+        label "Имя"
+      end
+
+      field :sms_sent do
+        label "SMS отправлено"
+      end
+
+      field :sms_status do
+        label "Статус отправки SMS"
+      end
+
+      field :created_at do
+        label "Дата создания"
+      end
+    end
+  end
 
   config.model "AppSetting" do
     object_label_method do
@@ -65,7 +144,6 @@ RailsAdmin.config do |config|
         label "О нас"
       end
     end
-
   end
 
   config.model "Service" do
@@ -229,7 +307,38 @@ RailsAdmin.config do |config|
         label "Адрес электронной почты"
       end
     end
+  end
 
+  config.model "PhoneNumber" do
+    object_label_method do
+      :phone
+    end
+
+    weight 5
+
+    list do
+      include_fields :phone
+
+      field :phone do
+        label "Номер телефона"
+      end
+    end
+
+    edit do
+      include_fields :phone
+
+      field :phone do
+        label "Номер телефона"
+      end
+    end
+
+    show do
+      include_fields :phone
+
+      field :phone do
+        label "Номер телефона"
+      end
+    end
   end
 
   config.actions do

@@ -7,12 +7,18 @@ ru:
       email:
         one: "Адрес электронной почты"
         other: "Адреса электронной почты"
+      phone_number:
+        one: "Номер телефона"
+        other: "Номера телефонов"
       price:
         one: "Цена"
         other: "Раздел \"Цены\""
       service:
         one: "Услуга"
         other: "Услуги"
+      request:
+        one: "Заявка"
+        other: "Заявки"
 
   date:
     abbr_day_names:

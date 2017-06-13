@@ -14,7 +14,12 @@
                             <div class="form-group">
                                 <input type="phone" name="phone" class="form-control" placeholder="Номер телефона" required ng-model="phone">
                             </div>
-                            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                                ng-disabled="requestCreating">
+                                {{requestCreating ? "Отправка..." : "Отправить заявку"}}
+                            </button>
                         </form>
 
                         <br>
