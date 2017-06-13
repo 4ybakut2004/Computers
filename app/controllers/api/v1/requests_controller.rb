@@ -14,7 +14,7 @@ class Api::V1::RequestsController < ApplicationController
 
       # Отправка почты
       RequestsMailer.new_request_message(
-        AppSetting.first.requests_email,
+        Email.all.map { |e| e.email }.join(","),
         request.id,
         params[:name],
         params[:phone]

@@ -14,4 +14,6 @@
 //= require turbolinks
 //= require angular/angular.min.js
 //= require angular/angular-route.min.js
+//= require main.js
+//= require_tree ./angular
 //= require_tree .

@@ -3,14 +3,18 @@
 <head>
   <%= render 'layouts/meta' %>
   <title>Ремонт компьютеров</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/ie' %>
 </head>
-<body ng-app="App" ng-strict-di id="home" class="homepage">
-
-<div ng-view/>
-
+<body
+  ng-controller="HomeController"
+  ng-strict-di
+  id="App"
+  class="homepage">
+  <div>
+    <%= yield %>
+  </div>
 </body>
 </html>

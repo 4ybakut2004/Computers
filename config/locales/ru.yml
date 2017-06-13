@@ -1,6 +1,18 @@
 ru:
   activerecord:
     models:
+      app_setting:
+        one: "Настройки"
+        other: "Настройки"
+      email:
+        one: "Адрес электронной почты"
+        other: "Адреса электронной почты"
+      price:
+        one: "Цена"
+        other: "Раздел \"Цены\""
+      service:
+        one: "Услуга"
+        other: "Услуги"
 
   date:
     abbr_day_names:

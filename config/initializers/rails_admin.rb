@@ -27,7 +27,7 @@ RailsAdmin.config do |config|
     end
 
     edit do
-      include_fields :company_name, :phone, :address, :about, :requests_email
+      include_fields :company_name, :phone, :address, :about
 
       field :company_name do
         label "Название компании"
@@ -43,15 +43,11 @@ RailsAdmin.config do |config|
 
       field :about do
         label "О нас"
-      end
-
-      field :requests_email do
-        label "Почта для получения заявок"
       end
     end
 
     show do
-      include_fields :company_name, :phone, :address, :about, :requests_email
+      include_fields :company_name, :phone, :address, :about
 
       field :company_name do
         label "Название компании"
@@ -67,10 +63,6 @@ RailsAdmin.config do |config|
 
       field :about do
         label "О нас"
-      end
-
-      field :requests_email do
-        label "Почта для получения заявок"
       end
     end
 

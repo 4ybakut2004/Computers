@@ -36,3 +36,5 @@ function NgNavigation($compile) {
 		}
 	};
 }
+
+app.directive('ngNavigation', ['$compile', NgNavigation]);

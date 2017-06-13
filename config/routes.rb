@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   # Домашнаяя страница
-  root 'static_pages#index'
+  root 'static_pages#home'
 
   # Пути к статическим страничкам
   get 'static_pages/home'

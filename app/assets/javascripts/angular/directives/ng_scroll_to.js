@@ -9,3 +9,5 @@ function NgScrollTo($compile) {
 		}
 	};
 }
+
+app.directive('ngScrollTo', ['$compile', NgScrollTo]);

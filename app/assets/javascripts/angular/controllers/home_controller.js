@@ -22,3 +22,7 @@ function HomeController($rootScope, $scope, $location, $route, $routeParams, Req
 		});
 	}
 }
+
+app.controller('HomeController', [
+	'$rootScope', '$scope', '$location', '$route', '$routeParams', 'Request', 'ngDialog', HomeController
+]);

@@ -11,8 +11,13 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="#"><img src="<%= asset_path('logo.png') %>" alt="logo"></a>
-                        <a class="navbar-brand header-phone" href="#"><%= @settings.phone %></a>
-                        <a class="navbar-brand header-address" href="#"><%= @settings.address %></a>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-left">
+                        <ul class="nav navbar-nav">
+                            <li class="header-phone" href="#"><%= @settings.phone %></li>
+                            <li class="header-address" href="#"><%= @settings.address %></li>
+                        </ul>
                     </div>
 
                     <div class="collapse navbar-collapse navbar-right" ng-navigation>

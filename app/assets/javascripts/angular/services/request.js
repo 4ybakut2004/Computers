@@ -9,3 +9,5 @@ function RequestService($resource) {
 
     return new Request();
 }
+
+app.factory('Request', ['$resource', RequestService]);
