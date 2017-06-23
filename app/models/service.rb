@@ -4,6 +4,9 @@ class Service < ActiveRecord::Base
   has_attached_file :big_image, styles: { medium: "300x300>", big: "557x557>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :big_image, content_type: /\Aimage\/.*\z/
 
+  has_attached_file :small_image, styles: { thumb: "50x50>" }
+  validates_attachment_content_type :small_image, content_type: /\Aimage\/.*\z/
+
   validates :name, presence: true, uniqueness: true
   validates :key, presence: true, uniqueness: true
 

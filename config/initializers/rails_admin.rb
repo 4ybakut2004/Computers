@@ -1,7 +1,10 @@
 RailsAdmin.config do |config|
   config.main_app_name = ["Computers"]
 
-  config.included_models = ["AppSetting", "Service", "Price", "Email", "PhoneNumber", "Request"]
+  config.included_models = [
+    "AppSetting", "Service", "Price", "Email",
+    "PhoneNumber", "Request"
+  ]
 
   config.model "Request" do
     object_label_method do
@@ -177,7 +180,7 @@ RailsAdmin.config do |config|
     end
 
     edit do
-      include_fields :name, :key, :show_in_header, :price, :crossed_price, :order, :big_image, :title_text
+      include_fields :name, :key, :show_in_header, :price, :crossed_price, :order, :big_image, :small_image, :title_text
 
       field :name do
         label "Название"
@@ -205,6 +208,10 @@ RailsAdmin.config do |config|
 
       field :big_image do
         label "Большая картинка"
+      end
+
+      field :small_image do
+        label "Маленькая картинка"
       end
 
       field :title_text, :ck_editor do

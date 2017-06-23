@@ -1,12 +1,19 @@
 <section id="service-section-<%= service_object.key %>" class="service-section">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title text-center wow fadeInDown"><%= service_object.name %></h2>
+            <h2 class="section-title text-center wow fadeInDown">
+                <% if service_object.small_image.exists? %>
+                    <img class="service-small-icon"
+                         src="<%= service_object.small_image.url(:thumb) %>"
+                         alt="">
+                <% end %>
+                <%= service_object.name %>
+            </h2>
         </div>
         <div class="row">
             <div class="col-sm-6 wow fadeInLeft">
                 <img class="img-responsive"
-                     src="<%= service_object.big_image.exists? ? service_object.big_image.url(:big) : asset_path("main-feature.png") %>"
+                     src="<%= service_object.big_image.exists? ? service_object.big_image.url(:big) : asset_path("main-feature.jpg") %>"
                      alt="">
             </div>
             <div class="col-sm-6">

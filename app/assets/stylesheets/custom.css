@@ -58,3 +58,15 @@
 	padding-bottom: 30px !important;
 	width: 400px !important;
 }
+
+.service-small-icon {
+	margin-top: -10px;
+	margin-right: 10px;
+}
+
+.work-process-icon {
+	width: 46px;
+	height: 46px;
+	margin-bottom: 2px;
+	margin-right: 1px;
+}
