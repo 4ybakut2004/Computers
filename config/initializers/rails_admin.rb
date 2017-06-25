@@ -1,5 +1,12 @@
 RailsAdmin.config do |config|
-  config.main_app_name = ["Computers"]
+
+  config.authorize_with do
+    authenticate_or_request_with_http_basic('Site Message') do |username, password|
+      username == ENV["BASIC_USERNAME"] && password == ENV["BASIC_PASSWORD"]
+    end
+  end
+
+  config.main_app_name = ["N-CITYCOM"]
 
   config.included_models = [
     "AppSetting", "Service", "Price", "Email",
