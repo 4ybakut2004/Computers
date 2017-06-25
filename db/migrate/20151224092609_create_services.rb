@@ -10,7 +10,5 @@ class CreateServices < ActiveRecord::Migration
     end
 
     add_index :services, :key, unique: true
-
-    Service.init_services
   end
 end

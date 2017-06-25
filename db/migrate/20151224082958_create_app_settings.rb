@@ -6,7 +6,5 @@ class CreateAppSettings < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-
-    AppSetting.init_settings
   end
 end
