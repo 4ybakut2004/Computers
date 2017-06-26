@@ -28,7 +28,7 @@ class Api::V1::RequestsController < ApplicationController
       if phones.size > 0
         text = "Заявка #{request.id}. Имя: #{params[:name]}. Телефон: #{params[:phone]}"
         result = get("https://sms.ru/sms/send", {
-          api_id: ENV["SMS_API_KEY"],
+          api_id: AppSetting.first.sms_api_key,
           to: phones.map { |p| p.phone }.join(","),
           msg: text,
           json: "1"

@@ -116,7 +116,7 @@ RailsAdmin.config do |config|
     end
 
     edit do
-      include_fields :company_name, :phone, :address, :about
+      include_fields :company_name, :phone, :address, :about, :sms_api_key
 
       field :company_name do
         label "Название компании"
@@ -132,6 +132,11 @@ RailsAdmin.config do |config|
 
       field :about do
         label "О нас"
+      end
+
+      field :sms_api_key do
+        label "SMS Api Key"
+        help "Ключ API из личного кабинета SMS"
       end
     end
 
